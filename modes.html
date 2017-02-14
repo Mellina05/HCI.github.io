@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<title>Mode Selection</title>
+
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/modal.css" rel="stylesheet" type="text/css" media="all" />
+
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Comfortaa:400,300,700' rel='stylesheet' type='text/css'>
+
+<noscript>
+  <style>
+  #week {display:none}
+  #weekScriptless {display:block !important}
+  </style>
+</noscript>
+
+</head> 
+<body>
+<!-- header -->
+	<div class="header">
+		<div class="container">
+			<div class="header-nav">
+				<nav class="navbar navbar-default">
+					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+					 <ul class="nav navbar-nav">
+						<li><a href="modes.html">Modes</a></li>
+						<li><a href="class_schedule.html" class="scroll">Class Schedule</a></li>
+						<li><a href="starts.html" class="scroll">Start</a></li>
+						<li><a href="Charts.html" class="scroll">Charts</a></li>
+						<li><a href="advices.html" class="scroll">Advices</a></li>
+						<li><a href="about.html" class="scroll">About</a></li>
+					  </ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+<!-- //header -->
+
+<div class="title">Mode Selection </div>
+
+<p class="title" id="week" style="font-size: 100%; margin: auto;white-space: nowrap;">Set the schedule for the week of </p>
+<p class="title" id="weekScriptless" style="font-size: 100%; margin:auto; white-space: nowrap; display:none">Set the schedule for this week</p>
+<script type="text/javascript">
+  var today = new Date();
+  var options = {year: "numeric", month: "long", day: "numeric"};
+  var dateString = today.toLocaleDateString("en-us",options);
+  dateString = dateString.substring(0, dateString.indexOf(',')) + "<sup>th</sup>" + dateString.substring(dateString.indexOf(','));
+  var week = document.getElementById("week");
+  var cur = week.innerHTML;
+  cur += dateString;
+  week.innerHTML = cur;
+ </script>
+		<!-- The Modal 1 -->
+		<div id="myModalOne" class="modal">
+		  <!-- Modal content -->
+		  <div class="modal-content">
+		    <div class="modal-header">
+		      <span class="close">&times;</span>
+		      <h2>Morning-Class Mode</h2>
+		    </div>
+		    <div class="modal-body">
+		    <div class = "check">
+		    	<div class = "box">
+					<label><input type="checkbox" value="" checked>Mon</label>
+					<label><input type="checkbox" value="" />Tue </label>
+					<label><input type="checkbox" value="" checked>Wed </label>
+					<label><input type="checkbox" value="" />Thu </label>
+					<label><input type="checkbox" value="" checked>Fri </label>
+					<label><input type="checkbox" value="" />Sat </label>
+					<label><input type="checkbox" value="" />Sun </label>
+				</div>
+			    <div>
+					<form class="form-inline">
+					  <div class="form-group">
+					    <label for="exampleInputName2">Clock</label>
+					    <input type="text" class="form-control" id="exampleInputName2" value = "8">
+					  </div>
+					  <div class="form-group">
+					    <input type="email" class="form-control" id="exampleInputEmail2" value = "30">
+					  </div>
+					</form>
+			    </div>
+		    </div>
+		    <div class = "clock">
+
+		    </div>
+		    </div>
+		    <div class="modal-footer">
+			    <div>
+			      <button type="button" class="btn btn-default btn-lg"></span>Cancel</button>
+			      <button type="button" class="btn btn-default btn-lg"></span>Save</button>
+			    </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- The Modal 2 -->
+		<div id="myModalTwo" class="modal">
+		  <!-- Modal content -->
+		  <div class="modal-content">
+		    <div class="modal-header">
+		      <span class="close">&times;</span>
+		      <h2>Afternoon-Class Mode</h2>
+		    </div>
+		    <div class="modal-body">
+		    	<div class = "box">
+					<label><input type="checkbox" value="" />Mon</label>
+					<label><input type="checkbox" value="" checked>Tue </label>
+					<label><input type="checkbox" value="" />Wed </label>
+					<label><input type="checkbox" value="" checked>Thu </label>
+					<label><input type="checkbox" value="" />Fri </label>
+					<label><input type="checkbox" value="" />Sat </label>
+					<label><input type="checkbox" value="" />Sun </label>
+				</div>
+			    <div>
+					<form class="form-inline">
+					  <div class="form-group">
+					    <label for="exampleInputName2">Clock</label>
+					    <input type="text" class="form-control" id="exampleInputName2" value = "10">
+					  </div>
+					  <div class="form-group">
+					    <input type="email" class="form-control" id="exampleInputEmail2" value = "30">
+					  </div>
+					</form>
+			    </div>
+		    </div>
+		    <div class="modal-footer">
+		      	<div>
+			      <button type="button" class="btn btn-default btn-lg"></span>Cancel</button>
+			       <button type="button" class="btn btn-default btn-lg"></span>Save</button>
+			    </div>
+		    </div>
+		  </div>
+		</div>
+
+		<!-- The Modal 3 -->
+		<div id="myModalThree" class="modal">
+		  <!-- Modal content -->
+		  <div class="modal-content">
+		    <div class="modal-header">
+		      <span class="close">&times;</span>
+		      <h2>Holiday Mode</h2>
+		    </div>
+		    <div class="modal-body">
+		    	<div class = "box">
+					<label><input type="checkbox" value="" />Mon</label>
+					<label><input type="checkbox" value="" />Tue </label>
+					<label><input type="checkbox" value="" />Wed </label>
+					<label><input type="checkbox" value="" />Thu </label>
+					<label><input type="checkbox" value="" />Fri </label>
+					<label><input type="checkbox" value="" />Sat </label>
+					<label><input type="checkbox" value="" />Sun </label>
+				</div>
+
+		    </div>
+		    <div class="modal-footer">
+		      	<div>
+			      <button type="button" class="btn btn-default btn-lg"></span>Cancel</button>
+			       <button type="button" class="btn btn-default btn-lg"></span>Save</button>
+			    </div>
+		    </div>
+		  </div>
+		</div>
+
+				<!-- The Modal 4 -->
+		<div id="myModalFour" class="modal">
+		  <!-- Modal content -->
+		  <div class="modal-content">
+		    <div class="modal-header">
+		      <span class="close">&times;</span>
+		      <h2>Customized Setting</h2>
+		    </div>
+		    <div class="modal-body">
+		    	<div class = "box">
+					<label><input type="checkbox" value="" />Mon</label>
+					<label><input type="checkbox" value="" />Tue </label>
+					<label><input type="checkbox" value="" />Wed </label>
+					<label><input type="checkbox" value="" />Thu </label>
+					<label><input type="checkbox" value="" />Fri </label>
+					<label><input type="checkbox" value="" />Sat </label>
+					<label><input type="checkbox" value="" />Sun </label>
+				</div>
+			    <div>
+					<form class="form-inline">
+					  <div class="form-group">
+					    <label for="exampleInputName2">Clock</label>
+					    <input type="text" class="form-control" id="exampleInputName2" value = "8">
+					  </div>
+					  <div class="form-group">
+					    <input type="email" class="form-control" id="exampleInputEmail2" value = "30">
+					  </div>
+					</form>
+			    </div>
+			 </div>
+		    <div class="modal-footer">
+		      	<div>
+			      <button type="button" class="btn btn-default btn-lg"></span>Cancel</button>
+			       <button type="button" class="btn btn-default btn-lg"></span>Save</button>
+			    </div>
+		    </div>
+		  </div>
+		</div>
+
+
+<div class="show_modess">
+	<div class="col-md-3 show_modes">
+		<div class="mode">
+			<div class="icons">
+				<span class="glyphicon glyphicon-certificate" aria-hidden="true"></span>
+			</div>
+			<h4>Morning-class Mode</h4>
+			<p>Choose the weekdays with <b>morning classes</b> and set an alarm time for each day.</p>
+		</div>
+
+	</div>
+	<div class="col-md-3 show_modes">
+		<div class="mode">
+			<div class="icons">
+				<span class="glyphicon glyphicon-lamp" aria-hidden="true"></span>
+			</div>
+			<h4>Afternoon-class Mode</h4>
+			<p>Choose the weekdays with <b>afternoon classes</b> and set an alarm time for each day.</p>
+		</div>
+
+
+	</div>
+	<div class="col-md-3 show_modes">
+		<div class="mode">
+			<div class="icons">
+				<span class="glyphicon glyphicon-plane" aria-hidden="true"></span>
+			</div>
+			<h4>Holiday mode</h4>
+			<p>No alarm mode.</p>
+		</div>
+
+	</div>
+	<div class="col-md-3 show_modes">
+		<div class="mode">
+			<div class="icons">
+				<span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+			</div>
+			<h4>Customized Settings</h4>
+			<p></p>
+		</div>
+
+	</div>
+	<div class="clearfix"> </div>
+</div>
+
+<button style="margin-left: 45%;" type="button" class="btn btn-default btn-lg">
+  <span class="glyphicon glyphicon-play" aria-hidden="true"></span> Start
+</button>
+<script src="js/function.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
